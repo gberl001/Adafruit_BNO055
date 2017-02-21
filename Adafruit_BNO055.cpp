@@ -55,7 +55,11 @@ Adafruit_BNO055::Adafruit_BNO055(int32_t sensorID, uint8_t address)
 bool Adafruit_BNO055::begin(adafruit_bno055_opmode_t mode)
 {
   /* Enable I2C */
+#if defined(__MK20DX128__ || __MK20DX256__ || __MK64FX512__ || __MK66FX1M0__ || __MKL26Z64__)
+  Wire.begin(I2C_MASTER, 0x00, I2C_PINS_18_19, I2C_PULLUP_EXT, 400000);
+#else
   Wire.begin();
+#endif
 
   // BNO055 clock stretches for 500us or more!
 #ifdef ESP8266

@@ -7,8 +7,8 @@
 
    Connections
    ===========
-   Connect SCL to analog 5
-   Connect SDA to analog 4
+   Connect SCL to analog 19
+   Connect SDA to analog 18
    Connect VDD to 3.3V DC
    Connect GROUND to common ground
 
