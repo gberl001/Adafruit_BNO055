@@ -29,7 +29,7 @@
 #ifdef __AVR_ATtiny85__
  #include <TinyWireM.h>
  #define Wire TinyWireM
-#elif defined(__MK20DX128__ || __MK20DX256__ || __MK64FX512__ || __MK66FX1M0__ || __MKL26Z64__)
+#elif defined(__MK20DX128__) || defined(__MK20DX256__) || defined(__MK64FX512__) || defined(__MK66FX1M0__) || defined(__MKL26Z64__)
 #include <i2c_t3.h>
 #else
  #include <Wire.h>
